@@ -1,7 +1,10 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
+
 import json, datetime, os
 
 app = Flask(__name__)
+CORS(app)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 @app.route('/')
